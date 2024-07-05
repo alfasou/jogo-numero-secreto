@@ -4,7 +4,6 @@
   "description": "jogo em javascript - descubra o número secreto",
   "scripts": {
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md,html}\"",
-    "build": "sass",
     "watch": "sass --watch style.scss:style.css"
   },
   "repository": {
