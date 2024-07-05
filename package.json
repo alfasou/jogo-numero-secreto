@@ -1,0 +1,31 @@
+{
+  "name": "jogo-numero-secreto",
+  "version": "1.0.0",
+  "description": "jogo em javascript - descubra o número secreto",
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md,html}\"",
+    "build": "sass",
+    "watch": "sass --watch style.scss:style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfasou/jogo-numero-secreto.git"
+  },
+  "keywords": [
+    "jogo",
+    "javascript",
+    "número"
+  ],
+  "author": "Andressa de Faria Souza",
+  "license": "MIT-0",
+  "bugs": {
+    "url": "https://github.com/alfasou/jogo-numero-secreto/issues"
+  },
+  "homepage": "https://github.com/alfasou/jogo-numero-secreto#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "husky": "^9.0.11",
+    "prettier": "^3.3.2",
+    "sass": "^1.77.6"
+  }
+}

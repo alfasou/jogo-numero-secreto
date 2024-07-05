@@ -1,0 +1,170 @@
+// VARIABLES
+// Colours
+$lighter-color: white;
+$light-color: gray;
+$main-color: #1875e8;
+$gradient-0: #1354a5 0%;
+$gradient-1: #041832 33.33%;
+$gradient-2: #041832 66.67%;
+$gradient-3: #01080e 100%;
+$box-shadow: rgba(1, 8, 14, 0.15);
+
+// Fonts
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// Sizes
+$size-smaller: 16px;
+$size-small: 24px;
+$size-medium: 32px;
+$size-large: 50px;
+$size-larger: 72px;
+$size-full-view: 100%;
+$size-large-view: 80%;
+$size-full-view-height: 100vh;
+$size-none: 0;
+
+//TEXT
+@import url('https://fonts.googleapis.com/css?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: $size-none;
+  padding: $size-none;
+  color: $lighter-color;
+}
+
+body {
+  background: linear-gradient(
+    $gradient-0,
+    $gradient-1,
+    $gradient-2,
+    $gradient-3
+  );
+  height: $size-full-view-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body::before {
+  background-image: url('img/code.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  content: '';
+  display: block;
+  position: absolute;
+  width: $size-full-view;
+  height: $size-full-view;
+  opacity: 0.4;
+}
+
+.container {
+  width: $size-large-view;
+  height: $size-large-view;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: $size-small;
+  border: 1px solid $main-color;
+  box-shadow: 4px 4px 20px 0px $box-shadow;
+  background-image: url('img/ruido.png');
+  background-size: $size-full-view $size-full-view;
+  position: relative;
+}
+
+.container__conteudo {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: $size-none;
+}
+
+.container__informacoes {
+  flex: 1;
+  padding: $size-large;
+}
+
+.container__botao {
+  border-radius: $size-smaller;
+  background: $main-color;
+  padding: $size-smaller $size-small;
+  width: $size-full-view;
+  font-size: $size-small;
+  font-weight: $font-weight-bold;
+  border: none;
+  margin-top: $size-medium;
+}
+
+.container__texto {
+  margin: $size-smaller $size-none $size-smaller $size-none;
+}
+
+.container__texto-azul {
+  color: $main-color;
+}
+
+.container__input {
+  width: $size-full-view;
+  height: $size-larger;
+  border-radius: $size-smaller;
+  background-color: $lighter-color;
+  border: none;
+  color: $main-color;
+  padding: $size-medium;
+  font-size: $size-small;
+  font-weight: $font-weight-bold;
+  font-family: 'Inter', sans-serif;
+}
+
+.container__botoes {
+  display: flex;
+  gap: 2em;
+}
+
+h1 {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: $size-larger;
+  padding-bottom: $size-large;
+}
+
+p,
+button {
+  font-family: 'Inter', sans-serif;
+}
+
+.texto__paragrafo {
+  font-size: $size-medium;
+  font-weight: $font-weight-regular;
+}
+
+button:disabled {
+  background-color: $light-color;
+}
+
+@media screen and (max-width: 1250px) {
+  h1 {
+    font-size: $size-large;
+  }
+
+  .container__botao {
+    font-size: $size-smaller;
+  }
+
+  .texto__paragrafo {
+    font-size: $size-small;
+  }
+
+  .container__imagem-pessoa {
+    display: none;
+  }
+
+  .container__conteudo {
+    display: block;
+    position: inherit;
+  }
+
+  .container__informacoes {
+    padding: $size-smaller;
+  }
+}
